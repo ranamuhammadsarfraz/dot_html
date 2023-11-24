@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 11px;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            background-color: white;
+            z-index: 10;
+        }
+
+        nav ul li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+        }
+
+        #ul_div {
+            display: grid;
+            place-content: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        nav ul li a {
+            color: #333;
+        }
+
+        nav #title {
+            font-size: 33px;
+        }
+
+        #icon_div {
+            display: none;
+        }
+
+        #picture_header {
+            background-image: url('https://cdn.pixabay.com/photo/2023/11/13/18/09/forest-8386084_1280.jpg');
+            width: 100%;
+            height: 80vh;
+            position: relative;
+            z-index: 0;
+            top: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        #picture_header h1 {
+            padding-left: 33px;
+            font-size: 50px;
+            color: silver;
+        }
+
+        #lorem_ipsum {
+            padding: 101px 0px 101px 0px;
+            width: 100%;
+            display: grid;
+            gap: 11px;
+        }
+
+        #lorem_ipsum p,
+        h2 {
+            width: 80%;
+            margin: auto;
+        }
+
+        #lorem_ipsum a {
+            color: black;
+            width: 100%;
+            text-align: right;
+            opacity: .8;
+            padding: 10px;
+        }
+
+        @media only screen and (max-width:768px) {
+            #icon_div {
+                display: flex;
+                display: grid;
+                place-content: center;
+            }
+
+            #ul_div {
+                position: fixed;
+                top: 60px;
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                top: -1001px;
+                background-color: #333;
+            }
+
+            nav ul li {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            nav {
+                justify-content: space-between;
+            }
+
+            #close_icon {
+                display: none;
+            }
+
+            #bars_icon,
+            #close_icon {
+                cursor: pointer;
+            }
+
+            nav ul li a {
+                color: silver;
+                font-size: 23px;
+            }
+
+            #picture_header h1 {
+                padding-left: 8px;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky NavBar</title>
+</head>
+
+<body>
+    <nav>
+        <div id="title">ABCWEBSITE</div>
+        <div id="ul_div">
+            <ul>
+                <li id="ul_li_nav_bar">
+                </li>
+            </ul>
+        </div>
+        <div id="icon_div">
+            <i id="bars_icon" class="fa-solid fa-bars"></i>
+            <i id="close_icon" class="fa-solid fa-xmark"></i>
+        </div>
+    </nav>
+    <div id="picture_header">
+        <h1>Early to bed, Early to rise, <br />makes a man Healthy,<br /> Wealthy and Wise</h1>
+    </div>
+    <div id="lorem_ipsum">
+        <h2>Lorem Ipsum</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores officia rem distinctio neque? Quae
+            cupiditate laudantium, accusamus laboriosam recusandae debitis nesciunt fugit voluptatem nam. Dolor,
+            laboriosam. Nostrum repellat ipsa assumenda.
+            Tempora pariatur, perferendis harum perspiciatis eaque, voluptatibus maxime ad dolorum enim deleniti
+            repellat molestiae exercitationem odit maiores illo doloribus. Consequatur totam facere inventore nostrum
+            hic accusantium tempora autem quae esse!
+            Ratione, officia quaerat quasi fugit deleniti culpa, possimus qui excepturi, quas obcaecati dolore
+            consequatur debitis blanditiis aperiam voluptatibus quisquam soluta nobis magnam. Fugit ut impedit corporis
+            earum, mollitia temporibus praesentium.
+            Dolorum voluptatum ullam vel architecto eligendi iusto, consectetur repudiandae et quis voluptas veniam
+            libero temporibus. Minima exercitationem esse repudiandae cupiditate debitis inventore corrupti, non, quos
+            ut harum culpa sint vero!
+            Fuga optio natus temporibus maxime id odio illum aspernatur molestias ratione quae, consequatur voluptates
+            eius excepturi eveniet dolor odit officiis provident ipsa illo suscipit at soluta obcaecati. Temporibus,
+            explicabo voluptatum.
+            Necessitatibus, facilis molestias impedit voluptate nihil deleniti voluptatibus ipsum eaque quia nesciunt
+            deserunt aliquam quaerat veniam. Nostrum harum error maxime repellat ratione quae vitae, alias dolor, sequi
+            velit omnis mollitia?
+            Doloribus repellendus, quidem sunt voluptates perferendis consequatur id vero tempore quasi esse unde
+            officia natus nihil? Magnam reiciendis enim, fuga tenetur architecto ducimus labore. Officia similique
+            ducimus ad non sed?
+            Itaque delectus exercitationem molestias alias! Praesentium quod consectetur eos. Possimus, autem, dolore ut
+            deleniti necessitatibus consequuntur nostrum exercitationem ea quam ducimus optio, beatae quos ipsa eaque ex
+            nam quidem provident?
+            Dignissimos, aliquid, dolor eligendi, perferendis doloribus illo blanditiis consequatur vero eveniet nam
+            expedita labore repellat non neque. Iure dolores reiciendis maxime excepturi impedit, dolore suscipit
+            repellendus corporis, iste quia hic?
+            Maiores tenetur perferendis quaerat eos vero mollitia rem facere vitae quis. Porro natus facere iure laborum
+            magnam deserunt vitae, qui dolores fugiat at suscipit, quis blanditiis quasi omnis expedita asperiores.
+            Soluta autem maxime temporibus facere eos reiciendis natus fugiat eum commodi pariatur tenetur repudiandae
+            optio sapiente aspernatur deserunt quasi, itaque veniam? Quo voluptates, reiciendis reprehenderit vel
+            possimus quod laborum totam!
+            Amet omnis tempore, iure saepe nihil temporibus fuga deserunt officiis a delectus quia pariatur cumque totam
+            repellat earum mollitia sint aperiam incidunt ullam illum laudantium? Asperiores velit assumenda iure quas.
+            Illum at voluptates placeat enim laboriosam ratione sunt qui itaque veniam numquam facilis consequatur
+            suscipit doloremque labore consectetur, dicta aut magnam, sapiente molestias saepe corrupti neque officia.
+            Odio, similique excepturi?
+            Magni, ea, fugiat explicabo sunt atque mollitia odio nam minima totam sit distinctio deleniti ipsam, nisi
+            non. Obcaecati ducimus, totam quas facere est sequi commodi rem asperiores nam doloremque veniam?
+            Cumque quod quo optio dolorum possimus ipsum, impedit beatae maiores autem quam vel, sequi doloribus quae
+            reprehenderit quidem deserunt a nesciunt assumenda expedita ullam. Praesentium magni aliquid laboriosam
+            inventore accusantium?
+            Nulla tenetur explicabo impedit, aperiam unde voluptatibus sed, aspernatur fugit sapiente ratione doloribus
+            fugiat ipsa illum. Nostrum excepturi dolores modi odio pariatur error autem mollitia. Omnis accusantium a et
+            nam.
+            Vitae, quo quis. Qui tempore iure, culpa reiciendis soluta obcaecati! Praesentium omnis amet nam fuga,
+            facere quisquam nemo non, ipsa quis officia, numquam nulla nesciunt eius aut. Vero, itaque pariatur?
+            Dolorum voluptatibus alias veritatis iste non, asperiores nihil, dignissimos modi magni sit eveniet autem
+            corporis eius aperiam animi sequi? Adipisci provident corrupti facere. Eius optio et earum laboriosam est
+            error?
+            Iure molestiae amet cum a! Expedita, officia a. Doloribus, quo saepe? Necessitatibus minima porro possimus,
+            doloremque totam quos minus atque at aliquam nihil iure, ex unde? Maxime quia voluptatem ducimus!
+            Eaque expedita, nisi odio dignissimos repudiandae alias tenetur et, sapiente cum quas asperiores voluptates
+            quam obcaecati voluptatem, adipisci nam. Quia repudiandae dolores a optio incidunt odio sapiente.
+            Recusandae, est corrupti!
+            Repudiandae fuga facere aliquid laudantium magnam fugiat molestiae obcaecati accusamus, est voluptatum
+            eveniet illo cumque modi tenetur? Quae, aperiam voluptatem error id excepturi molestias ipsum deserunt, nam
+            mollitia eveniet ullam.
+            Totam mollitia magnam deserunt cupiditate. Vitae hic, sint, voluptatibus ducimus totam minus illum quia
+            veniam consequatur, mollitia obcaecati provident delectus itaque alias est unde veritatis dolorem ipsum
+            consequuntur officiis architecto.
+            Magni nulla corrupti consequatur, voluptas eligendi commodi placeat nesciunt harum nobis tempora facilis
+            autem fugit reiciendis omnis? Distinctio autem, at quae possimus recusandae placeat iure, vero natus
+            blanditiis fuga numquam.
+            Ab enim nemo officia mollitia consectetur harum, aspernatur aliquam odit voluptas modi dolores assumenda
+            facilis, consequuntur voluptatum necessitatibus dignissimos repudiandae alias eos quod. Animi nobis
+            necessitatibus dolorum voluptatum eos illum.
+            Dignissimos sit eos quaerat nesciunt quas omnis veritatis explicabo, quisquam vitae sapiente, similique
+            reprehenderit nobis, in odit molestias quidem totam. Laborum impedit sint ab sequi itaque culpa, totam dicta
+            officiis!
+            Placeat qui molestias non suscipit nihil quibusdam, eligendi eveniet blanditiis nobis, repellendus vitae
+            maxime illo vero itaque tempore dolor possimus eos sequi quis corporis quia debitis sit? Ipsa, magnam quia.
+            Nam eius molestias consequuntur. Odit repellat eligendi ea nisi quo odio dolores, in natus animi dolore
+            voluptatibus corrupti tenetur ab veritatis dicta ut quis, molestiae laboriosam soluta aliquid. Ea, alias?
+            Neque laudantium, molestias dolorum quas voluptatem voluptas est expedita aut reiciendis soluta commodi
+            impedit inventore et minima itaque, accusamus rerum consequatur nostrum ipsam nemo velit. Expedita
+            perspiciatis cumque sed minima.
+            Ex, qui. Nihil, ipsa nostrum quod animi accusantium rerum molestiae architecto eligendi pariatur corrupti
+            aperiam obcaecati iure at magnam perferendis odit ipsum unde ipsam, minus repellat ratione totam.
+            Voluptatem, illo.
+            Eveniet, temporibus animi sint dolor at ad veniam quo ipsam tenetur expedita adipisci et minima recusandae
+            possimus quisquam ratione pariatur quis repellendus quos eaque ab cumque? Earum cum id rerum.
+        </p>
+        <a href="https://rmsencode.com">Developed by R.M.Sarfraz</a>
+    </div>
+</body>
+<script>
+    const menuArray = [
+        {
+            "title": "Home",
+            "url": "#"
+        },
+        {
+            "title": "About",
+            "url": "#"
+        },
+        {
+            "title": "Terms and Conditions",
+            "url": "#"
+        },
+        {
+            "title": "Blog",
+            "url": "#"
+        },
+        {
+            "title": "Contact us",
+            "url": "#"
+        },
+        {
+            "title": "Sitemap",
+            "url": "#"
+        },
+    ],
+        ul_li_nav_bar = document.getElementById("ul_li_nav_bar")
+    menuArray.map((data) => {
+        const ul_li_nav_bar_a_href = document.createElement("a")
+
+        const ul_li_a_href_append = ul_li_nav_bar.appendChild(ul_li_nav_bar_a_href)
+
+        ul_li_nav_bar_a_href.innerText = data.title
+        ul_li_nav_bar_a_href.href = data.url
+    })
+    const bars_icon = document.getElementById('bars_icon'),
+        close_icon = document.getElementById("close_icon"),
+        ul_div = document.getElementById("ul_div")
+    bars_icon.addEventListener("click", () => {
+        ul_div.style.top = "60px"
+        ul_div.style.transition = "1s"
+        close_icon.style.display = "block"
+        bars_icon.style.display = "none"
+
+    })
+    close_icon.addEventListener("click", () => {
+        ul_div.style.top = "-1001px"
+        ul_div.style.transition = "1s"
+        close_icon.style.display = "none"
+        bars_icon.style.display = "block"
+    })
+</script>
+
+</html>
