@@ -44,7 +44,7 @@
         }
 
         nav ul li a {
-            color: #333;
+            color: rgb(117, 117, 117);
         }
 
         nav #title {
@@ -148,7 +148,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="nav">
         <div id="title">ABCWEBSITE</div>
         <div id="ul_div">
             <ul>
@@ -283,7 +283,6 @@
         ul_li_nav_bar = document.getElementById("ul_li_nav_bar")
     menuArray.map((data) => {
         const ul_li_nav_bar_a_href = document.createElement("a")
-
         const ul_li_a_href_append = ul_li_nav_bar.appendChild(ul_li_nav_bar_a_href)
 
         ul_li_nav_bar_a_href.innerText = data.title
@@ -305,6 +304,23 @@
         close_icon.style.display = "none"
         bars_icon.style.display = "block"
     })
+
+    const nav = document.getElementById("nav")
+
+    window.onscroll = () => myScrollMethod();
+
+    function myScrollMethod() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            nav.style.background = "#FFFFFF"
+            nav.style.color = "#000000"
+            nav.style.transition = ".5s"
+        } else {
+            nav.style.background = "#000000"
+            nav.style.color = "#FFFFFF"
+            nav.style.transition = ".5s"
+        }
+
+    }
 </script>
 
 </html>
